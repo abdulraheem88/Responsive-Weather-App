@@ -1,0 +1,196 @@
+/* Reset default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    background-size: cover;
+    background-position: center;
+    overflow-y: auto; /* Allow vertical scroll */
+    padding: 20px;
+  }
+  
+  .container {
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(25px);
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    padding: 40px 30px;
+    width: 95%;
+    max-width: 900px;
+    text-align: center;
+    color: #ffffff;
+    max-height: 90vh;
+    overflow-y: auto;
+  
+    /* Hide scrollbar */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+  }
+
+  .container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+  }
+  
+  .input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-direction: column;
+  }
+  
+  input[type="text"] {
+    padding: 14px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transition: 0.3s ease;
+  }
+  
+  input::placeholder {
+    color: #ddd;
+  }
+  
+  input:focus {
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  button {
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    transition: 0.3s ease;
+  }
+  
+  button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #0096e0, #0054d6);
+  }
+  
+  .weather-box {
+    margin-top: 25px;
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  .weather-split {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 40px;
+    text-align: left;
+  }
+  
+  .weather-left,
+  .weather-right {
+    flex: 1;
+    min-width: 45%;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  .weather-left h2 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  
+  .weather-left p,
+  .weather-right p {
+    margin: 8px 0;
+    font-size: 1.05rem;
+  }
+  
+  .forecast-day {
+    margin-top: 12px;
+    padding: 10px;
+    border-left: 4px solid #00bfff;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    transition: 0.3s ease;
+  }
+  
+  .forecast-day:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateX(5px);
+  }
+  
+  /* Fade-in animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .weather-split {
+      flex-direction: column;
+    }
+  
+    .weather-left,
+    .weather-right {
+      min-width: 100%;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    h1 {
+      font-size: 2rem;
+    }
+  
+    input,
+    button {
+      font-size: 0.95rem;
+    }
+  }
+  
+
+
+  .footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    font-size: 0.95rem;
+    color: #ddd;
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  .footer p {
+    margin: 0;
+  }
+  
+  .footer strong {
+    color: #fff;
+  }
